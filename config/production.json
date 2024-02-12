@@ -1,0 +1,21 @@
+{
+  "mongodbConnectURI": "",
+  "dbName": "",
+
+  "jwtSecret": "",
+  "jwtExpireTime": 360000,
+
+  "CognitoRegion": "",
+  "CognitoToCUserPoolId": "",
+  "CognitoTokenUse": "access",
+  "CognitoTokenExpiration": 8640000,
+
+  "S3AccessKeyID": "",
+  "S3SecretAccessKey": "",
+  "S3ProfilePhotoBucketName": "",
+  "S3CoverImageBucketName": "",
+  "S3VideoBucketName": "",
+  "S3VideoUrlPrefix": "",
+  "S3ProfilePhotoUrlPrefix": "",
+  "S3CoverImageUrlPrefix": ""
+}
