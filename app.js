@@ -8,7 +8,7 @@ const expressValidator = require('express-validator');
 mongoose.set('debug', true);
 
 // Routes
-//
+const userRoutes = require('./routes/user');
 
 const app = express();
 
@@ -24,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 
 // Add routers
+app.use('/api/v1/user', userRoutes);
 app.get('/', function (req, res) {
   res.status(200).json({
     message: 'Successfully access MeetFood API.',

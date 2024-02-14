@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema(
     },
     userName: {
       type: String,
-      // unique: true,
+      unique: true,
     },
     firstName: {
       type: String,

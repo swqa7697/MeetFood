@@ -2,11 +2,8 @@
   "mongodbConnectURI": "",
   "dbName": "",
 
-  "jwtSecret": "",
-  "jwtExpireTime": 360000,
-
   "CognitoRegion": "",
-  "CognitoToCUserPoolId": "",
+  "CognitoUserPoolId": "",
   "CognitoTokenUse": "access",
   "CognitoTokenExpiration": 8640000,
 
