@@ -353,6 +353,9 @@ exports.uploadCoverImage = async (req, res) => {
     const imageStored = await s3
       .upload(imageParams, (error) => {
         if (error) {
+          // Clear uploaded image file
+          fs.unlinkSync(req.file.path);
+
           return res.status(500).json({
             errors: [
               {
@@ -376,6 +379,9 @@ exports.uploadCoverImage = async (req, res) => {
       imageUrl,
     });
   } catch (err) {
+    // Clear uploaded image file
+    fs.unlinkSync(req.file.path);
+
     res.status(500).json({ msg: 'Failed to upload image', err: err.message });
   }
 };
@@ -406,6 +412,9 @@ exports.uploadVideo = async (req, res) => {
     const videoStored = await s3
       .upload(videoParams, (error) => {
         if (error) {
+          // Clear uploaded video file
+          fs.unlinkSync(req.file.path);
+
           return res.status(500).json({
             errors: [
               {
@@ -429,6 +438,9 @@ exports.uploadVideo = async (req, res) => {
       videoUrl,
     });
   } catch (err) {
+    // Clear uploaded video file
+    fs.unlinkSync(req.file.path);
+
     res.status(500).json({ msg: 'Failed to upload video', err: err.message });
   }
 };
